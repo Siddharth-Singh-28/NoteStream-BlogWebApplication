@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Write | NoteStream</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+<div class="page-container">
+
+  <%- include("partials/header.ejs") %>
+
+  <main class="content new-section">
+
+    <div class="new-wrapper">
+
+      <h1 class="new-heading">Write a New Post</h1>
+
+      <form action="/new" method="POST" class="new-form">
+
+        <div class="new-input-group">
+          <label>Post Title</label>
+          <input type="text" name="title" maxlength="60" placeholder="Enter your title..." required>
+        </div>
+
+        <div class="new-input-group">
+          <label>Content</label>
+          <textarea name="content" rows="8" placeholder="Start writing your thoughts..." required></textarea>
+        </div>
+
+        <div class="publish-wrapper">
+          <button type="submit" class="publish-btn">
+            Publish
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <%- include("partials/footer.ejs") %>
+
+</div>
+</body>
+</html>

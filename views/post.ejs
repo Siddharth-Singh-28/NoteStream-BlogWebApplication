@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= post.title %> | NoteStream</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+<div class="page-container">
+
+  <%- include("partials/header.ejs") %>
+
+  <main class="content single-post-section">
+
+    <div class="single-post-wrapper">
+
+      <h1 class="single-post-title"><%= post.title %></h1>
+
+      <p class="single-post-content"><%= post.content %></p>
+
+    </div>
+
+  </main>
+
+  <%- include("partials/footer.ejs") %>
+
+</div>
+</body>
+</html>
